@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo</title>
+
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <header class="tod">
+      It's
+      <b><%= Time.now.strftime("%-I:%M %p") %></b>
+      on a
+      <b><%= Time.now.strftime("%A").upcase %>!</b><br>
+      <em>Let' s get stuff done!</em>
+    </header>
+
+    <div class="bg">
+      <div class="container">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>
